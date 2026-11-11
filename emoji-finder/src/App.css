@@ -1,0 +1,105 @@
+/* Сброс базовых стилей */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #f0f0f0; /* Светло-серый фон */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Шапка */
+.header {
+  background-color: #2b7a78; /* Цвет из макета */
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-content {
+  text-align: center;
+  color: white;
+}
+
+.header h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.header p {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+/* Поиск (наезжает на шапку) */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -30px; /* Поднимаем вверх */
+  z-index: 10;
+}
+
+.search-input {
+  width: 80%;
+  max-width: 800px;
+  padding: 20px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  outline: none;
+}
+
+/* Основной блок с карточками */
+.main-content {
+  flex: 1;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Сетка карточек (Grid) */
+.cards-grid {
+  display: grid;
+  /* 3 колонки на десктопе, 1 на мобильных */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Карточка (Flex) */
+.card {
+  background: white;
+  padding: 40px 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+  max-width: 250px;
+}
